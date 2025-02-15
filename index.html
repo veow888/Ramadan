@@ -6,6 +6,7 @@
     <title>Ramadan Countdown 2025</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
+        /* نفس الأنماط السابقة بدون تغيير */
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
         
         * {
@@ -613,13 +614,15 @@
         }
     };
 
-    let currentLanguage = 'en';
+    let currentLanguage = 'ar'; // اللغة الافتراضية عربية
     let countdownTimer;
 
     function initializeLanguage() {
         const savedLang = localStorage.getItem('preferredLanguage');
         if (savedLang) {
             setLanguage(savedLang);
+        } else {
+            setLanguage('ar'); // تعيين العربية كلغة افتراضية إذا لم يكن هناك تفضيل محفوظ
         }
         
         document.getElementById('lang-toggle').addEventListener('click', () => {
@@ -809,4 +812,4 @@
     document.addEventListener('DOMContentLoaded', initializeApp);
     </script>
 </body>
-  </html>
+</html>
